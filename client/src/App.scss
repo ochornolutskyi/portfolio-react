@@ -1,0 +1,50 @@
+@import "./VARIABLES.scss";
+/* footer-bottom */
+
+.App {
+   display: flex;
+   flex-direction: column;
+}
+.content {
+   flex: 1 0 auto;
+}
+.footer {
+   flex: 0 0 auto;
+}
+/* index style */
+@font-face {
+   font-family: "Segoe";
+   src: url("./fonts/Segoe-UI.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+@font-face {
+   font-family: "Hairline";
+   src: url("./fonts/Hairline.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+* {
+   box-sizing: border-box;
+}
+*:focus{
+   outline: none;
+}
+body {
+   width: 100%;
+   background-color: #363639;
+   font-family: "Segoe", "Open Sans", Arial;
+   color: $colorTextWhite;
+}
+.App {
+   max-width: 1366px;
+   width: 100%;
+   margin: 0 auto;
+}
+body::-webkit-scrollbar {
+   background: $colorLines;
+   width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+   background: $colorPrimary;
+}

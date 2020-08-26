@@ -1,0 +1,20 @@
+.error-page {
+   width: 100vw;
+   height: 100vh;
+   h1 {
+      position: absolute;
+      top: 25%;
+      width: inherit;
+      text-align: center;
+      font-size: 38px;
+      vertical-align: middle;
+   }
+   h2{
+      position: absolute;
+      top: 45%;
+      width: inherit;
+      text-align: center;
+      font-size: 28px;
+      vertical-align: middle;
+   }
+}

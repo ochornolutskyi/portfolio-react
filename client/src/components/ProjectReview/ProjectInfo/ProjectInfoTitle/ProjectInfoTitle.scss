@@ -1,0 +1,13 @@
+@import '../../../../VARIABLES.scss';
+
+.project-info-title{
+   text-align: right;
+   font-size: 20px;
+   line-height: 1.2em;
+   letter-spacing: 0.12em;
+   font-weight: bold;
+   font-family: "Hairline";
+   color: $colorPrimary;
+   margin-bottom: 10px;
+   text-shadow: 0 0 2px #000;
+}

@@ -1,0 +1,22 @@
+@import "../../../../VARIABLES.scss";
+
+.project-info-description {
+   margin-top: 3px;
+   padding: 5px 10px;
+   width: 100%;
+   max-height: 381px;
+   text-align: justify;
+   font-size: 18px;
+   line-height: normal;
+   letter-spacing: 0.015em;
+   overflow-y: auto;
+}
+
+.project-info-description::-webkit-scrollbar {
+   width: 4px;
+}
+
+.project-info-description::-webkit-scrollbar-thumb {
+   background: $colorPrimary;
+   border-right: 1px solid $colorLines;
+}

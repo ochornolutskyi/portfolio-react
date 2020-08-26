@@ -1,0 +1,90 @@
+@import "../../VARIABLES.scss";
+.ArrowContainer {
+   z-index: 5555;
+   .Arrow {
+      position: relative;
+      width: 35px;
+      height: 20px;
+      span {
+         position: absolute;
+         display: block;
+         height: 3px;
+         width: 100%;
+         background-color: $colorLines;
+      }
+      .ArrowLeftPart {
+         width: 15px;
+         top: 15px;
+         right: 23px;
+         transform: rotateZ(45deg);
+      }
+      .ArrowRightPart {
+         width: 15px;
+         top: 5px;
+         right: 23px;
+         transform: rotateZ(-45deg);
+      }
+      .ArrowCenterPart {
+         top: 10px;
+      }
+   }
+}
+
+#SliderArrowPrev:hover,
+#SliderArrowNext:hover {
+   opacity: 1 !important;
+}
+
+.ArrowContainer:hover {
+   cursor: pointer;
+   .Arrow {
+      span {
+         background-color: $colorPrimary;
+      }
+   }
+}
+
+#ToTop {
+   opacity: 1;
+   width: 35px;
+   height: 22px;
+   position: fixed;
+   bottom: 20px;
+   right: 50px;
+   transform: rotateZ(90deg);
+   .Arrow {
+      opacity: 0;
+   }
+}
+
+#SliderArrowPrev {
+   left: 20px;
+}
+#SliderArrowNext {
+   transform: rotateY(180deg);
+   right: 20px;
+}
+#BackArrow {
+   opacity: 1;
+   top: 16px;
+   left: 11px;
+   margin-right: 0;
+   position: absolute;
+   a {
+      text-decoration: none;
+      span {
+         display: block;
+         margin: 0 auto;
+         font-size: 12px;
+         color: $colorLines;
+      }
+   }
+}
+
+#BackArrow:hover {
+   a {
+      span {
+         color: $colorPrimary;
+      }
+   }
+}

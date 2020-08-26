@@ -1,0 +1,12 @@
+@import "./../../../../../VARIABLES.scss";
+
+.employee-title {
+   margin-bottom: 15px;
+   color: $colorPrimary;
+   font-family: 'Hairline';
+   font-weight: bold;
+   letter-spacing: 0.12em;
+   font-size: 21px;
+   line-height: 1.2em;
+   // text-shadow: 0 0 1px $colorLines;
+}

@@ -1,0 +1,61 @@
+@import "../../../VARIABLES.scss";
+
+.header {
+   width: 100%;
+   min-height: 602px;
+   background: url(../../../img/background/background-header-hd.png) no-repeat;
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   .employee {
+      max-width: 549px;
+      width: 100%;
+   }
+   &-nav {
+      max-width: 814px;
+      width: 100%;
+      height: min-content;
+      margin-top: 350px;
+      &-ul {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         &-li {
+            position: relative;
+            display: block;
+            flex-shrink: 1;
+            flex-grow: 1;
+            height: 38px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: inherit;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 0.2em;
+            line-height: 38px;
+            padding: 0 10px;
+            box-sizing: border-box;
+         }
+         &-li:nth-child(1) {
+            text-transform: none;
+         }
+         /* &-li:nth-child(3) {
+            min-width: 210px;
+            flex-basis: 285px;
+         } */
+         &-li:hover {
+            box-shadow: inset 0px 0px 5px 1px
+               rgba($color: $colorLines, $alpha: 0.7);
+            cursor: pointer;
+            background-color: $colorPrimary;
+            color: $colorTextGray;
+            transition: background-color 0.15s linear;
+            .menu-projects-list {
+               display: flex;
+            }
+         }
+      }
+   }
+}

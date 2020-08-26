@@ -1,0 +1,22 @@
+@import "../../../../../VARIABLES.scss";
+
+.employee-info-name {
+   max-width: 641px;
+   width: 100%;
+   position: absolute;
+   right: 0;
+   top: 65px;
+   text-align: right;
+   font-size: 75px;
+   letter-spacing: .4em;
+   color: $colorPrimary;
+   font-family: 'Hairline', "Open Sans", Arial;
+   font-weight: bolder;
+   display: flex;
+   flex-direction: column;
+   text-transform: uppercase;
+   // text-shadow: 0 0 2px $colorLines;
+   span:last-child {
+      margin-top: 20px;
+   }
+}

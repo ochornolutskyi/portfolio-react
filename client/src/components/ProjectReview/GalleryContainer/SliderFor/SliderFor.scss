@@ -1,0 +1,27 @@
+@import '../../../../VARIABLES.scss';
+.sliderFor {
+   width: 100%;
+   height: 109px;
+   ul{
+      width: 100%;
+      height: inherit;
+      overflow-x: hidden;
+      display: flex;
+      // justify-content: start;
+      align-items: center;
+      li{
+         margin-right: 50px;
+         width: 100%;
+         height: 89px;         display: flex;
+         align-items: center;
+         img{
+            height: inherit;
+            width: auto;
+         }
+         #sliderForActive{
+            border: 4px solid $colorPrimary;
+            height: 109px;
+         }
+      }
+   }
+}
