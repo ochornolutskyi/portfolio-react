@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5fcc03c4.chunk.css",
+    "main.js": "/static/js/main.882b477a.chunk.js",
+    "main.js.map": "/static/js/main.882b477a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.aa0fa942.js",
+    "runtime-main.js.map": "/static/js/runtime-main.aa0fa942.js.map",
+    "static/js/2.ea441671.chunk.js": "/static/js/2.ea441671.chunk.js",
+    "static/js/2.ea441671.chunk.js.map": "/static/js/2.ea441671.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.c805433916d0ce4c9157d8292d9a3a4d.js": "/precache-manifest.c805433916d0ce4c9157d8292d9a3a4d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5fcc03c4.chunk.css.map": "/static/css/main.5fcc03c4.chunk.css.map",
+    "static/js/2.ea441671.chunk.js.LICENSE.txt": "/static/js/2.ea441671.chunk.js.LICENSE.txt",
+    "static/media/1.png": "/static/media/1.ec9d0b5a.png",
+    "static/media/10.png": "/static/media/10.910d7db7.png",
+    "static/media/2.png": "/static/media/2.e90a164d.png",
+    "static/media/3.png": "/static/media/3.cb5c2e30.png",
+    "static/media/4.png": "/static/media/4.d7b8a85c.png",
+    "static/media/5.png": "/static/media/5.ec1d41e3.png",
+    "static/media/6.png": "/static/media/6.1191aa59.png",
+    "static/media/7.png": "/static/media/7.ab3f9efa.png",
+    "static/media/8.png": "/static/media/8.8d8943a2.png",
+    "static/media/9.png": "/static/media/9.7828e88b.png",
+    "static/media/Hairline.ttf": "/static/media/Hairline.d88995a6.ttf",
+    "static/media/Segoe-UI.ttf": "/static/media/Segoe-UI.6581cfae.ttf",
+    "static/media/background-header-hd (copy).png": "/static/media/background-header-hd (copy).ce71c556.png",
+    "static/media/background-header-hd.png": "/static/media/background-header-hd.2876a094.png",
+    "static/media/background-header.png": "/static/media/background-header.2f764b3b.png",
+    "static/media/background-main-hd (copy).png": "/static/media/background-main-hd (copy).1e9e8f34.png",
+    "static/media/background-main-hd.png": "/static/media/background-main-hd.a5ce0fd9.png",
+    "static/media/background-main.png": "/static/media/background-main.362aff7f.png",
+    "static/media/background-project-hd (copy).png": "/static/media/background-project-hd (copy).b1b25de4.png",
+    "static/media/background-project-hd.png": "/static/media/background-project-hd.c5cd5b01.png",
+    "static/media/photo.png": "/static/media/photo.7f1d710a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa0fa942.js",
+    "static/js/2.ea441671.chunk.js",
+    "static/css/main.5fcc03c4.chunk.css",
+    "static/js/main.882b477a.chunk.js"
+  ]
+}
