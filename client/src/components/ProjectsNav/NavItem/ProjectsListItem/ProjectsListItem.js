@@ -17,7 +17,6 @@ const ProjectsListItem = React.forwardRef(
                   {props.projectTitle}
                </a>
             );
-            // return `#${props.projectLinkHref}`;
          } else if (props.linkType === "projectReview-nav-ul-li") {
             return (
                <Link
@@ -29,7 +28,6 @@ const ProjectsListItem = React.forwardRef(
                   {props.projectTitle}
                </Link>
             );
-            // return `/project-review/${props.projectLinkHref.replace(/\s/g, "-")}`;
          }
       };
       //scroll to project after anchor clicked
