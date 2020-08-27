@@ -36,29 +36,29 @@ class App extends Component {
       return (
          <div className="App">
             <div className="content">
-               {/* {this.state.isLoading ? (
+               {this.state.isLoading ? (
                   <h1>LOADING</h1>
-               ) : ( */}
-               <Router>
-                  <Switch>
-                     <Route
-                        exact
-                        path="/"
-                        render={() => <Employee employee={employee} />}
-                     />
-                  </Switch>
+               ) : (
+                  <Router>
+                     <Switch>
+                        <Route
+                           exact
+                           path="/"
+                           render={() => <Employee employee={employee} />}
+                        />
+                     </Switch>
 
-                  <Switch>
-                     <Route
-                        exact
-                        path="/project-review/:title"
-                        render={(props) => (
-                           <ProjectReview {...props} employee={employee} />
-                        )}
-                     />
-                  </Switch>
-               </Router>
-               {/* )} */}
+                     <Switch>
+                        <Route
+                           exact
+                           path="/project-review/:title"
+                           render={(props) => (
+                              <ProjectReview {...props} employee={employee} />
+                           )}
+                        />
+                     </Switch>
+                  </Router>
+               )}
             </div>
          </div>
       );

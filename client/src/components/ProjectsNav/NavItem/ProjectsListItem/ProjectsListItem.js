@@ -80,15 +80,6 @@ const ProjectsListItem = React.forwardRef(
       return (
          <li ref={hoveredCurrentListLastChild}>
             {createLink()}
-            {/* <a
-               href={hrefLink()}
-               ref={linkRef}
-               onClick={(event) => {
-                  anchorClickHandler(event);
-               }}
-            > */}
-            {/* {props.projectTitle} */}
-            {/* </a> */}
          </li>
       );
    }
