@@ -1,13 +1,35 @@
 import React from "react";
 import "./ProjectsListItem.scss";
+import { Link } from "react-router-dom";
 
 const ProjectsListItem = React.forwardRef(
    (props, hoveredCurrentListLastChild) => {
-      const hrefLink = () => {
+      const createLink = () => {
          if (props.linkType === "header-nav-ul-li") {
-            return `#${props.projectLinkHref}`;
+            return (
+               <a
+                  href={`#${props.projectLinkHref}`}
+                  ref={linkRef}
+                  onClick={(event) => {
+                     anchorClickHandler(event);
+                  }}
+               >
+                  {props.projectTitle}
+               </a>
+            );
+            // return `#${props.projectLinkHref}`;
          } else if (props.linkType === "projectReview-nav-ul-li") {
-            return `/${props.projectLinkHref.replace(/\s/g, "-")}`;
+            return (
+               <Link
+                  to={`/project-review/${props.projectLinkHref.replace(
+                     /\s/g,
+                     "-"
+                  )}`}
+               >
+                  {props.projectTitle}
+               </Link>
+            );
+            // return `/project-review/${props.projectLinkHref.replace(/\s/g, "-")}`;
          }
       };
       //scroll to project after anchor clicked
@@ -16,15 +38,15 @@ const ProjectsListItem = React.forwardRef(
          const type = linkRef.current.getAttribute("href").slice(0, 1);
          if (type === "#") {
             event.preventDefault();
+
             const scrollToId = linkRef.current.getAttribute("href").slice(1);
             const scrollToElement = document.getElementById(scrollToId);
             scrollToElement.scrollIntoView({
                block: "center",
                behavior: "smooth",
             });
+            //TODO: must to fix disable changing opacity when hovered
             //showing title
-            //check the mouse enter on preview
-
             const scrollToElementTitle = Array.from(
                scrollToElement.children
             ).map((item) => {
@@ -49,22 +71,26 @@ const ProjectsListItem = React.forwardRef(
             }, 2000);
             //
          } else if (type === "/") {
-            return;
+            const projectTitle = linkRef.current.getAttribute("href").slice(1);
+            // console.log(projectTitle)
+            return props.navClickHandler(projectTitle);
          } else {
             return;
          }
       };
+
       return (
          <li ref={hoveredCurrentListLastChild}>
-            <a
+            {createLink()}
+            {/* <a
                href={hrefLink()}
                ref={linkRef}
                onClick={(event) => {
                   anchorClickHandler(event);
                }}
-            >
-               {props.projectTitle}
-            </a>
+            > */}
+            {/* {props.projectTitle} */}
+            {/* </a> */}
          </li>
       );
    }

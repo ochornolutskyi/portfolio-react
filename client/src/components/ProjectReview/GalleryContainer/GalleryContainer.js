@@ -17,28 +17,33 @@ class GalleryContainer extends Component {
             transform: null,
          },
       };
-   }
-
-   //TODO: must change that for dynamical taking images from folder
-   componentDidMount() {
-      const createImagesList = () => {
+      this.createImagesList = () => {
          let allImages = [];
          this.props.projectData.images.map((image) => {
-            allImages.push(
-               require(`../../../${image}`)
-            );
+            allImages.push(require(`../../../${image}`));
          });
          return allImages;
       };
-      const allImages = createImagesList();
-      const firstImage = allImages[0];
-      this.setState({
-         allImages,
-         currentImage: {
-            index: 1,
-            imgSrc: firstImage,
-         },
-      });
+      this.setImagesList = () => {
+         const allImages = this.createImagesList();
+         const firstImage = allImages[0];
+         this.setState({
+            allImages,
+            currentImage: {
+               index: 1,
+               imgSrc: firstImage,
+            },
+         });
+      };
+   }
+
+   componentDidMount() {
+      this.setImagesList();
+   }
+   componentDidUpdate(prevProps) {
+      if (prevProps.projectData.images !== this.props.projectData.images) {
+         this.setImagesList();
+      }
    }
 
    render() {

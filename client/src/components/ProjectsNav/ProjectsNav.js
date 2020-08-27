@@ -19,10 +19,12 @@ class ProjectsNav extends Component {
                   category={category}
                   projectsList={this.props.projectsList}
                   liClass={this.props.navClasses.navUlLiClass}
+                  navClickHandler={this.props.navClickHandler}
                />
             );
          }
       );
+
       return (
          <nav
             id="menu"

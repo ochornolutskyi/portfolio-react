@@ -37,6 +37,7 @@ class NavItem extends Component {
                      projectTitle={project.title}
                      projectLinkHref={project.id}
                      linkType={this.props.liClass}
+                     navClickHandler={this.props.navClickHandler}
                   />
                );
             } else {
@@ -46,6 +47,7 @@ class NavItem extends Component {
                      projectTitle={project.title}
                      projectLinkHref={project.title}
                      linkType={this.props.liClass}
+                     navClickHandler={this.props.navClickHandler}
                   />
                );
             }

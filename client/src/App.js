@@ -15,7 +15,7 @@ class App extends Component {
    }
 
    componentDidMount() {
-      fetch("https://git.heroku.com/portfolio-designer-react.git/*", { method: "GET" })
+      fetch("/api/*", { method: "GET" })
          .then((response) => {
             if (response.ok) {
                return response.clone().json();
@@ -23,43 +23,42 @@ class App extends Component {
          })
          .then((result) => {
             this.setState({ employee: result });
-            if (this.state.employee !== null) {
-               this.setState({ isLoading: false });
-            }
+            this.setState({ isLoading: false });
          })
          .catch((err) => console.log(err));
    }
 
    render() {
-      const employee = this.state.employee;
+      const { employee, isLoading } = this.state;
+
+      if (isLoading) return <h1>LOADING</h1>;
 
       return (
          <div className="App">
             <div className="content">
-               {this.state.isLoading ? (
+               {/* {this.state.isLoading ? (
                   <h1>LOADING</h1>
-               ) : 
-               (
-                  <Router>
-                     <Switch>
-                        <Route
-                           exact
-                           path="/"
-                           render={() => <Employee employee={employee} />}
-                        />
-                     </Switch>
-                     <Switch>
-                        <Route
-                           exact
-                           path="/:title"
-                           render={(props) => (
-                              <ProjectReview {...props} employee={employee} />
-                           )}
-                        />
-                     </Switch>
-                  </Router>
-               )
-               }
+               ) : ( */}
+               <Router>
+                  <Switch>
+                     <Route
+                        exact
+                        path="/"
+                        render={() => <Employee employee={employee} />}
+                     />
+                  </Switch>
+
+                  <Switch>
+                     <Route
+                        exact
+                        path="/project-review/:title"
+                        render={(props) => (
+                           <ProjectReview {...props} employee={employee} />
+                        )}
+                     />
+                  </Switch>
+               </Router>
+               {/* )} */}
             </div>
          </div>
       );

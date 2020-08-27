@@ -7,7 +7,7 @@ const Preview = (props) => {
 
    return (
       <div id={props.project.id} className={props.classes}>
-         <a href={`/${modifiedLink}`}>
+         <a href={`/project-review/${modifiedLink}`}>
             <img src={imagePreview} alt="project" />
             <p>{props.project.title}</p>
          </a>

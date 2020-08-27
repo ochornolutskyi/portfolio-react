@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ProjectReview.scss";
 import ProjectsNav from "../ProjectsNav/ProjectsNav";
 import GalleryContainer from "./GalleryContainer/GalleryContainer";
@@ -11,26 +11,31 @@ const ProjectReview = (props) => {
       navUlClass: "projectReview-nav-ul",
       navUlLiClass: "projectReview-nav-ul-li",
    };
-   //for api
-   const projectTitle = props.match.url.slice(1);
+
+   const projectTitle = props.match.params.title;
    const projectData = props.employee.projects.filter((project) => {
       return (
-         project.title.toUpperCase().replace(/\s/g, "") ===
-         projectTitle.toUpperCase().replace(/-/g, "")
+         project.title.toLowerCase().replace(/\s/g, "") ===
+         projectTitle.toLowerCase().replace(/-/g, "")
       );
    })[0];
 
    return (
       <React.Fragment>
-         <main id="projectReview" className="projectReview">
-            <Arrow arrowId="BackArrow" type="back" />
-            <GalleryContainer projectData={projectData} />
-            <ProjectInfo projectInfo={projectData} />
-            <ProjectsNav
-               projectsList={props.employee.projects}
-               navClasses={navClasses}
-            />
-         </main>
+         {!projectData ? (
+            <h1>Loading</h1>
+         ) : (
+            <main id="projectReview" className="projectReview">
+               <Arrow arrowId="BackArrow" type="back" />
+               <GalleryContainer projectData={projectData} />
+               <ProjectInfo projectInfo={projectData} />
+               <ProjectsNav
+                  projectsList={props.employee.projects}
+                  navClasses={navClasses}
+                  // navClickHandler={navClickHandler}
+               />
+            </main>
+         )}
       </React.Fragment>
    );
 };
